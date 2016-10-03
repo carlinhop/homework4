@@ -15,8 +15,8 @@ class Car
 
   def accelerate()
    if can_accelerate?   
-      @speed += 10
-      @fuel -= 5
+      @speed += @engine.values[:acceleration]
+      @fuel += @engine.values[:fuel_expenditure]
     else
       puts "Cannot go any faster!!!"
    end

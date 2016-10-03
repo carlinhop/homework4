@@ -7,6 +7,8 @@ class TestCar < MiniTest::Test
   def setup
     @engine1 = Engine.new("gasoline")
     @car1 = Car.new(@engine1, fuel = 100, speed = 0)
+    @engine2 = Engine.new("turbo")
+    @car2 = Car.new(@engine2, fuel = 100, speed = 0)
   end 
 
   #ask question about this method
@@ -17,10 +19,18 @@ class TestCar < MiniTest::Test
   def test_accelerate
     @car1.accelerate
     speed_new = @car1.speed
-    fuel_new = @car1.fuel 
-
+    fuel_new = @car1.fuel
     assert_equal(10, @car1.speed)
-    assert_equal(95,@car1.fuel)
+    assert_equal(95, @car1.fuel)
+
+    @car2.accelerate
+    speed_new = @car2.speed
+    fuel_new = @car2.fuel
+    assert_equal(25, @car2.speed)
+    assert_equal(90,@car2.fuel)
+
+
+
   end
 
   def test_brake

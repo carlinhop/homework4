@@ -3,8 +3,11 @@ class Engine
   
   def values
     if @type == "gasoline"
-      @values = {acceleration: 5, fuel_expenditure: -10}
+      @values = {acceleration: 10, fuel_expenditure: -5}
+    else
+      @values = {acceleration: 25, fuel_expenditure: -10}
     end
+
   end
 
   def initialize(type)
