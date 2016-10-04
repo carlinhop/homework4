@@ -23,11 +23,15 @@ class Car
   end
 
   def can_break?
-    (@speed - 10) >= 0? true : false 
+    @speed> 0? true : false 
   end
 
   def break
-    @speed -=10 if can_break?
+    if can_break? and  (@speed - 10 >=0)
+      @speed -=10 
+    else
+      @speed = 0
+    end
   end
 
 end

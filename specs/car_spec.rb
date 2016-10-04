@@ -22,15 +22,12 @@ class TestCar < MiniTest::Test
     fuel_new = @car1.fuel
     assert_equal(10, @car1.speed)
     assert_equal(95, @car1.fuel)
-
+    #Tests using the second car
     @car2.accelerate
     speed_new = @car2.speed
     fuel_new = @car2.fuel
     assert_equal(25, @car2.speed)
     assert_equal(90,@car2.fuel)
-
-
-
   end
 
   def test_brake
